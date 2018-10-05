@@ -1,4 +1,4 @@
-let createError = require('http-errors');
+    let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
@@ -7,7 +7,7 @@ const comporession = require ('compression');
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-const mongoDB = 'mongodb://127.0.0.1:27017/library_db';
+const mongoDB = process.env.MONGODB_URI = 'mongodb://127.0.0.1:27017/library_db';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
